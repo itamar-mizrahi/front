@@ -14,17 +14,23 @@ function App() {
   const getData = (ID) => {
     chats.forEach((chat) => {
       if (chat.chatID === ID) {
-        return chat.questions;
+        console.log(chat.questions);
+        //TODO:switch case of data by qid and type of question
+        return (chat.questions.map(question=><li>{question.order}, {question.qid}</li>));
+      }
+      else{
+
+        return (<div>Nothing found</div>);
       }
     });
+    return (<div>Nothing yet</div>);
   };
   useEffect(() => {
-    getData();
-  }, []);
+    getData(ID);
+  }, [ID]);
   const handleInput = (e) => {
     e.preventDefault();
     getData(ID);
-    return data;
   };
   return (
     <div className="App">
@@ -38,6 +44,7 @@ function App() {
             placeholder="enter ID"
           />
           <button type="submit">get data</button>
+          {}
           {/* <InputData/> */}
           {/* <ChatsData data={data}/> */}
         </header>
