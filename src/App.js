@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+// import ChatsData from './components/ChatsData';
+// import InputData from './components/InputHandle';
+import { useState } from 'react';
 function App() {
+  const [data, setdata] = useState()
   return (
     <div className="App">
+      <form onSubmit={getData}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        enter yout ID here:
+        <input type="text" value={data} placeholder="enter ID" />
+    <button type="submit">get data</button>
+
+    {/* <InputData/> */}
+    {/* <ChatsData data={data}/> */}
+
       </header>
+      </form>
     </div>
   );
+}
+
+function getData(e) {
+  e.preventDefault();
+  debugger;
+  console.log(e.target);
+  
+  
 }
 
 export default App;
