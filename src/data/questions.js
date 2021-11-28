@@ -1,4 +1,4 @@
-[
+export const questions=[
   {
     "qid": 1,
     "qtype": 1,

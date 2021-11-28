@@ -1,5 +1,5 @@
-[
-    {
+
+    export const answers=[{
         "qids": [4],
         "range": {
             "min": 0,
@@ -41,5 +41,5 @@
         "qids": [10, 7],
         "atext": "Not at all"
     }
-]
+    ]
 

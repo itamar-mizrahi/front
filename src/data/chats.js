@@ -1,4 +1,4 @@
-[
+export const chats=[
   {
     "chatID": "QZ8M559",
     "questions": [
